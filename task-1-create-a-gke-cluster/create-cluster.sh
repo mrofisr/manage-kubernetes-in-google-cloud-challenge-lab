@@ -7,7 +7,7 @@ gcloud container clusters create $CLUSTER_NAME \
   --project=$PROJECT_ID \
   --machine-type=e2-standard-2 \
   --release-channel=regular \
-  --cluster-version=1.27.8 \
+  --cluster-version=1.29 \
   --enable-autoscaling \
   --num-nodes=3 \
   --min-nodes=2 \
