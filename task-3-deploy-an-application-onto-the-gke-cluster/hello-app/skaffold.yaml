@@ -1,4 +1,3 @@
-
 # Copyright 2021 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,19 +14,19 @@
 
 # [START container_helloapp_skaffold]
 # [START gke_kubernetes_engine_samples_hello_app_skaffold_config]
-apiVersion: skaffold/v2beta4
+apiVersion: skaffold/v4beta11
 kind: Config
 build:
   tagPolicy:
     sha256: {}
   artifacts:
-  - context: .
-    image: hello-app
+    - context: .
+      image: hello-app
 deploy:
   kubectl:
     manifests:
-    - manifests/helloweb-deployment.yaml
-    - manifests/helloweb-service-load-balancer.yaml
+      - manifests/helloweb-deployment.yaml
+      - manifests/helloweb-service-load-balancer.yaml
 # profiles:
 # - name: cloudbuild
 #   build:
@@ -35,3 +34,4 @@ deploy:
 # [END gke_kubernetes_engine_samples_hello_app_skaffold_config]
 # [END container_helloapp_skaffold]
 ---
+

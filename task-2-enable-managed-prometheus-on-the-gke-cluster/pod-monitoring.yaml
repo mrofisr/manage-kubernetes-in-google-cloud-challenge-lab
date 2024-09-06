@@ -15,13 +15,13 @@
 apiVersion: monitoring.googleapis.com/v1
 kind: PodMonitoring
 metadata:
-  name: <todo>
+  name: prometheus-test
   labels:
-    app.kubernetes.io/name: <todo>
+    app.kubernetes.io/name: prometheus-test
 spec:
   selector:
     matchLabels:
-      app: <todo>
+      app: prometheus-test
   endpoints:
-  - port: metrics
-    interval: <todo>
+    - port: metrics
+      interval: <todo>
